@@ -1,19 +1,31 @@
-# ChatGPT and DALL·E2 in a Panel App
+# ChatGPT in a Panel App
 
 ## How to run?
 
-1. Get your OpenAI API key from openai.com and add your keys to the script. 
+1. Get your OpenAI API key from openai.com and add your keys to a .env file like so:
+```
+APIKEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```
 
-2. Install needed packages: \
-`pip install openai`\
-`conda install panel`
+2. Set up a virtual environment using venv and activate it
+```
+$ pip install virtualenv
+$ python -m venv .venv
+$ source ./.venv/bin/activate
+```
 
-3. Run Panel dashboard:\
-`panel serve panel_openai.ipynb` \
-or \
-`panel serve panel_openai.py`
+3. Install needed packages: 
+```
+$ pip install openai
+$ pip install panel
+$ pip install jupyterlab
+```
+
+4. Run Panel dashboard:\
+```
+$ panel serve panel_openai_text_completion.ipynb
+```
 
 
-## What does it look like?
 
-<img src=panel_openai.gif>
+

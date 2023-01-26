@@ -1,6 +1,6 @@
 import os
 import openai
-openai.api_key = "TYPE_YOUR_API_KEY_HERE"
+openai.api_key = os.environ.get("APIKEY")
 
 # OPENAI APIs
 def openai_completion(prompt):
@@ -27,6 +27,17 @@ def openai_image(prompt):
     image_url = response['data'][0]['url']
     return image_url
 
+def openai_code(prompt):
+    """
+    OpenAI text completion API given prompt return text
+    """
+    response = openai.Completion.create(
+      model="text-davinci-003",
+      prompt=prompt,
+      max_tokens=150,
+      temperature=0.5
+    )
+    return response['choices'][0]['text']
 
 # PANEL DASHBOARD
 import panel as pn

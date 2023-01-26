@@ -21,9 +21,9 @@ $ pip install panel
 $ pip install jupyterlab
 ```
 
-4. Run Panel dashboard:\
+4. Run Jupyter Lab
 ```
-$ panel serve panel_openai_text_completion.ipynb
+$ jupyter lab
 ```
 
 
